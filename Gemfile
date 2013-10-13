@@ -24,8 +24,10 @@ gem 'jquery-rails'
 
 group :test do
   gem 'minitest'
+  gem 'minitest-rails-capybara'
   gem 'capybara'
   gem 'turn'
+  gem 'speaker'
 end
 
 # To use ActiveModel has_secure_password

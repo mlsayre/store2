@@ -1,7 +1,6 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
-require "minitest/autorun"
-require "capybara/rails"
+require "minitest/rails/capybara"
 require "active_support/testing/setup_and_teardown"
 
 class IntegrationTest < MiniTest::Spec

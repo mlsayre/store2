@@ -1216,7 +1216,9 @@ module MiniTest
       #
       # See #before_setup for an example.
 
-      def after_teardown; end
+      def after_teardown;
+        Speaker.new(text: "one test complete").tts
+      end
     end
 
     ##

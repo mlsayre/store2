@@ -27,7 +27,7 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'capybara'
   gem 'turn'
-  gem 'speaker'
+  gem 'minitest-speaks'
 end
 
 # To use ActiveModel has_secure_password

@@ -1,0 +1,4 @@
+$('#edit_product_<%= @product.id %>').remove();
+$('#new_link').show();
+$('tbody').append('<%= j render(@product) %>');
+$('#<%= @product.id %>').remove();

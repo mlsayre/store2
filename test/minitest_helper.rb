@@ -15,6 +15,3 @@ class HelperTest < MiniTest::Spec
   register_spec_type(/Helper$/, self)
 end
 Turn.config.format = :outline
-
-
-

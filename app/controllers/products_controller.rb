@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }
+      format.js
     end
   end
 
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }
+      format.js
     end
   end
 
@@ -46,6 +48,7 @@ class ProductsController < ApplicationController
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -62,6 +65,7 @@ class ProductsController < ApplicationController
       if @product.update_attributes(params[:product])
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { head :no_content }
+        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -72,12 +76,12 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
+    @product = Product.destroy(params[:id])
 
     respond_to do |format|
       format.html { redirect_to products_url }
       format.json { head :no_content }
+      format.js
     end
   end
 end

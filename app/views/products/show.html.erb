@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Picture:</b>
+  <%= image_tag @product.avatar.url(:square) %>
+</p>
+
+<p>
   <b>Price:</b>
   <%= @product.price %>
 </p>
